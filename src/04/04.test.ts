@@ -1,4 +1,6 @@
-const ages =[12,23,5,234,21,31,96,14]
+import {CoursesType} from "./04";
+
+export const ages =[12,23,5,234,21,31,96,14]
 
 const courses = [
     {title:"Css", price:110},

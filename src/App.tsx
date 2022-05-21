@@ -1,29 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
+import SuperInputText from "./components/SuperInput/SuperInputText";
+import SuperCheckBox from "./components/SuperCheckBox";
 
-
+//цель 1 - создать инпут который вводит текст
 function App() {
-  function checkScope() {
+    const [text, setText] = useState<string>("")
+    const [checked, setChecked] = useState<boolean>(false)
+    console.log(checked)
+    const error = text ? '' : 'error'
 
-    const i = 'function scope';
-    for(;;){
-      const i = "dfdfd"
-    }
-
-    if (true) {
-      let i = 'block scope';
-      console.log('Block scope i is: ', i);
-    }
-
-    console.log('Function scope i is: ', i);
-    return i;
-  }
-  checkScope()
-  return (
-    <div className="App">
-
+    return (
+        <div>
+        <SuperInputText  value={text} onChange={(e)=>setText(e.currentTarget.value)}/>
+        <SuperCheckBox onChangeChecked={setChecked}> <>dasfasdga</> </ SuperCheckBox >
     </div>
-  );
+
+    )
 }
 
 export default App;
