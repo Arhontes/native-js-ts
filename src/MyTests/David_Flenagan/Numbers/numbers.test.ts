@@ -40,19 +40,7 @@ test("number should be correct",()=>{
     const altA = Number("121")
     expect(altA).toBe(121)
 
-    /*------------------------------- приводим boolean к числу----------------------------------- */
 
-    //приводим булевое значения к числу с помощью Number true дает 1
-    let d = Number(true)
-    expect(d).toBe(1)
-    // false - 0
-    d = Number(false)
-    expect(d).toBe(0)
-    //приводим булевое значения к числу с помощью + true дает 1 false 0
-    const altD = +false
-    expect(altD).toBe(0)
-    const altaltD = + true
-    expect(altaltD).toBe(1)
 
 
     const e = Number(undefined)
@@ -60,6 +48,23 @@ test("number should be correct",()=>{
     const i = Number(null)
     expect(i).toBe(0)
 
+
+
+})
+test("boolean as number",()=>{
+    /*------------------------------- приводим boolean к числу----------------------------------- */
+    //parseInt не работает
+    //приводим булевое значения к числу с помощью Number true дает 1
+    let d = Number(true)
+    expect(d).toBe(1)
+    // false - 0
+    d = Number(false)
+    expect(d).toBe(0)
+    //приводим булевое значения к числу с помощью +, true дает 1,false 0
+    const altD = +false
+    expect(altD).toBe(0)
+    const altaltD = + true
+    expect(altaltD).toBe(1)
 
 
 })
