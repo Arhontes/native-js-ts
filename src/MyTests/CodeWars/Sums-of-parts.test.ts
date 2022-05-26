@@ -8,3 +8,4 @@ test("should be correct",()=>{
     const arrResult = [10037855, 9293730, 9292795, 9292388, 9291934, 9291504, 9291414, 9291270, 2581057, 2580168, 2579358, 0]
     expect(arr).toStrictEqual(arrResult)
 })
+
