@@ -9,7 +9,10 @@ function App() {
     const [checked, setChecked] = useState<boolean>(false)
     console.log(checked)
     const error = text ? '' : 'error'
-
+    const git =()=>{
+        alert("push")
+        alert("pull")
+    }
     return (
         <div>
         <SuperInputText  value={text} onChange={(e)=>setText(e.currentTarget.value)}/>
